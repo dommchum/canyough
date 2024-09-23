@@ -1,0 +1,91 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNhLa1UkuqoMqRXiKUhv0I7",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/dommchum/canyough/blob/main/lab2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 35,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 211
+        },
+        "id": "69w2hz0WzJ7p",
+        "outputId": "44e7f1ca-8248-417f-c666-e65a4557b00f"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "name 'setwd' is not defined",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-35-b7eba30a31bf>\u001b[0m in \u001b[0;36m<cell line: 7>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0;31m# Specify the file path\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 7\u001b[0;31m \u001b[0msetwd\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"C:\\\\Users\\\\DomChum\\\\Downloads\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      8\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      9\u001b[0m \u001b[0;31m# Check if the file exists\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'setwd' is not defined"
+          ]
+        }
+      ],
+      "source": [
+        "from IPython.display import IFrame\n",
+        "import urllib\n",
+        "import numpy as np\n",
+        "import os\n",
+        "\n",
+        "# Specify the file path\n",
+        "setwd (\"C:\\\\Users\\\\DomChum\\\\Downloads\")\n",
+        "\n",
+        "# Check if the file exists\n",
+        "if os.path.exists(file_path):\n",
+        "    try:\n",
+        "        # Load the data\n",
+        "        data = np.loadtxt('olympic100m.txt', delimiter=',')\n",
+        "\n",
+        "        # Extract columns\n",
+        "        x = data[:, 0][:, None]\n",
+        "        t = data[:, 1][:, None]\n",
+        "\n",
+        "        print(\"Data loaded successfully.\")\n",
+        "        print(\"x:\", x)\n",
+        "        print(\"t:\", t)\n",
+        "    except Exception as e:\n",
+        "        print(f\"An error occurred while loading the data: {e}\")\n",
+        "else:\n",
+        "    print(\"File not found. Please check the file path.\")\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "XVi1ty-83KbK"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
